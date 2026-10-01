@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: light;
+}
+
+/* Frosted glass and soft aesthetic cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(186, 215, 248, 0.3), 0 4px 12px -2px rgba(199, 210, 254, 0.2);
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.notebook-paper {
+  background-color: #ffffff;
+  background-image: linear-gradient(#f1f5f9 1px, transparent 1px);
+  background-size: 100% 28px;
+  line-height: 28px;
+}
+
+/* Floating and drifting animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.2deg);
+  }
+}
+
+@keyframes floatGentleReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.2deg);
+  }
+}
+
+@keyframes cloudDriftSlow {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(24px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes cloudDriftReverse {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shimmerSoft {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+}
+
+.animate-float-slow {
+  animation: floatGentle 6.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatGentleReverse 7.5s ease-in-out infinite;
+}
+
+.animate-cloud-drift {
+  animation: cloudDriftSlow 18s ease-in-out infinite;
+}
+
+.animate-cloud-drift-rev {
+  animation: cloudDriftReverse 22s ease-in-out infinite;
+}
+
+.animate-shimmer-soft {
+  animation: shimmerSoft 4s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 5s ease-in-out infinite;
+}
+
+@keyframes bookFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes bookFloatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+.animate-book-float {
+  animation: bookFloat 7.5s ease-in-out infinite;
+}
+
+.animate-book-float-rev {
+  animation: bookFloatReverse 8.5s ease-in-out infinite;
+}
+
+/* Notebook paper with light blue horizontal ruling and light red margin line */
+.notebook-ruled {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(90deg, transparent 42px, #fbcfe8 42px, #fbcfe8 44px, transparent 44px),
+    linear-gradient(#e0f2fe 1px, transparent 1px);
+  background-size: 100% 100%, 100% 26px;
+  line-height: 26px;
+}
+
+/* Custom soft scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
